@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('html/head.html', {
+"title": "Panteon"
+})
+
+<body>
+	@@include('html/header.html')
+	<main class="main">
+		<section class="intro" id="intro" data-lock-padding>
+			<div class="container">
+				<div class="intro__inner">
+					<div class="intro__content" data-animatable>
+						<h1 class="intro__title">
+							Фитнес клуб Пантеон
+						</h1>
+						<p class="intro__text">
+							Лучше нас только боги
+						</p>
+						<a class="button intro__button" data-popup-target="#popup-success" href="#">
+							<span>Получить консультацию</span>
+						</a>
+					</div>
+					<img class="intro__scroll-trigger" src="img/icons/arrow-down.svg" alt="scroll down">
+					<ul class="intro__social social-list">
+						<li class="social-list__item">
+							<a class="social-list__link" href="#">
+								<svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M14.6686 10.9999V10.999C14.6686 10.1507 14.3744 9.32867 13.8363 8.67295C13.2982 8.01723 12.5493 7.56839 11.7173 7.40289C10.8854 7.23739 10.0217 7.36548 9.27361 7.76533C8.52549 8.16517 7.93914 8.81205 7.61448 9.59573C7.28981 10.3794 7.24691 11.2514 7.49309 12.0632C7.73927 12.875 8.25928 13.5763 8.96455 14.0476C9.66981 14.519 10.5167 14.7312 11.3609 14.6482C12.2051 14.5651 12.9944 14.1919 13.5943 13.5922C13.9347 13.2632 14.2052 12.8689 14.3898 12.4329C14.5744 11.997 14.6692 11.5283 14.6686 11.0549L14.6677 10.9971V10.9999H14.6686ZM16.6486 10.9999C16.6442 12.3001 16.1894 13.5587 15.3616 14.5614C14.5337 15.564 13.384 16.2489 12.1081 16.4993C10.8322 16.7497 9.5089 16.5503 8.36346 15.935C7.21803 15.3196 6.32121 14.3264 5.82564 13.1242C5.33006 11.9221 5.26636 10.5854 5.64536 9.34163C6.02436 8.09783 6.82265 7.02379 7.90437 6.3023C8.98609 5.5808 10.2844 5.25643 11.5783 5.38439C12.8723 5.51235 14.0819 6.08474 15.0014 7.00413C15.5235 7.51079 15.9385 8.11723 16.2216 8.78743C16.5048 9.45763 16.6503 10.1779 16.6495 10.9055L16.6486 11.0054V11.0008V10.9999ZM18.195 5.12771V5.12955C18.1951 5.43494 18.0893 5.73092 17.8957 5.96705C17.702 6.20319 17.4325 6.36486 17.1329 6.42453C16.8334 6.4842 16.5225 6.43817 16.2531 6.29429C15.9838 6.15041 15.7726 5.91757 15.6557 5.63545C15.5387 5.35334 15.5232 5.0394 15.6118 4.74713C15.7004 4.45487 15.8875 4.20235 16.1414 4.03262C16.3953 3.86289 16.7002 3.78644 17.0041 3.8163C17.308 3.84616 17.5922 3.98048 17.8082 4.19638C18.0429 4.42646 18.1886 4.7473 18.1886 5.10205V5.12863V5.12771H18.195ZM11.0084 1.97438L9.91296 1.96705C9.24929 1.96216 8.74543 1.96216 8.40137 1.96705C8.05732 1.97194 7.59654 1.9863 7.01904 2.01013C6.48279 2.02846 5.97404 2.08163 5.47629 2.16596L5.54321 2.1568C5.15362 2.22096 4.80804 2.31263 4.47712 2.43455L4.51654 2.42171C4.04905 2.60964 3.62392 2.88928 3.26622 3.24414C2.90853 3.599 2.62552 4.02189 2.43387 4.48788L2.42471 4.51263C2.30705 4.83467 2.21989 5.16704 2.16437 5.50538L2.15979 5.5393C2.07826 6.02096 2.02956 6.50761 2.01404 6.99588L2.01312 7.01513C1.98929 7.59324 1.97493 8.05402 1.97004 8.39746C1.96515 8.74091 1.96515 9.24477 1.97004 9.90905C1.97493 10.5733 1.97737 10.9385 1.97737 11.0045C1.97737 11.0705 1.97493 11.4356 1.97004 12.0999C1.96515 12.7642 1.96515 13.268 1.97004 13.6115C1.97493 13.9549 1.98929 14.4157 2.01312 14.9938C2.03146 15.53 2.08462 16.0388 2.16896 16.5365L2.15979 16.4696C2.22396 16.8592 2.31562 17.2048 2.43754 17.5357L2.42471 17.4963C2.61264 17.9638 2.89228 18.3889 3.24714 18.7466C3.602 19.1043 4.02489 19.3873 4.49087 19.579L4.51562 19.5881C4.80712 19.6972 5.15271 19.7889 5.50837 19.8485L5.54229 19.853C5.97221 19.9282 6.48096 19.9814 6.99796 19.9988L7.01721 19.9997C7.59532 20.0235 8.0561 20.0379 8.39954 20.0428C8.74299 20.0477 9.24685 20.0477 9.91112 20.0428L11.0001 20.0208L12.0955 20.0281C12.7592 20.033 13.2631 20.033 13.6071 20.0281C13.9512 20.0232 14.412 20.0089 14.9895 19.985C15.5257 19.9667 16.0345 19.9135 16.5322 19.8292L16.4653 19.8384C16.8549 19.7742 17.2005 19.6825 17.5314 19.5606L17.492 19.5735C17.9595 19.3855 18.3846 19.1059 18.7423 18.751C19.1 18.3962 19.383 17.9733 19.5746 17.5073L19.5838 17.4825C19.6929 17.191 19.7845 16.8455 19.8441 16.4898L19.8487 16.4559C19.9239 16.026 19.977 15.5172 19.9945 15.0002L19.9954 14.981C20.0192 14.4029 20.0336 13.9421 20.0385 13.5986C20.0433 13.2552 20.0433 12.7513 20.0385 12.087C20.0336 11.4228 20.0311 11.0576 20.0311 10.9916C20.0311 10.9256 20.0336 10.5605 20.0385 9.89621C20.0433 9.23193 20.0433 8.72807 20.0385 8.38463C20.0336 8.04119 20.0192 7.58041 19.9954 7.0023C19.977 6.46605 19.9239 5.9573 19.8395 5.45955L19.8487 5.52646C19.7906 5.16301 19.6975 4.806 19.571 4.46038L19.5838 4.4998C19.3959 4.0323 19.1162 3.60717 18.7614 3.24948C18.4065 2.89179 17.9836 2.60877 17.5176 2.41713L17.4929 2.40796C17.1708 2.2903 16.8385 2.20314 16.5001 2.14763L16.4662 2.14305C15.9848 2.06156 15.4985 2.01286 15.0105 1.9973L14.9913 1.99638C14.4132 1.97255 13.9524 1.95819 13.609 1.9533C13.2655 1.94841 12.7617 1.94841 12.0974 1.9533L11.0084 1.97438ZM22.002 10.9999C22.002 13.1864 21.9775 14.6999 21.9286 15.5401C21.972 16.3917 21.8359 17.2429 21.5292 18.0385C21.2226 18.8341 20.7522 19.5564 20.1485 20.1586C19.5448 20.7608 18.8214 21.2294 18.025 21.5341C17.2287 21.8389 16.3772 21.9729 15.5257 21.9275L15.5404 21.9284C14.7001 21.9773 13.1867 22.0017 11.0001 22.0017C8.81357 22.0017 7.30015 21.9773 6.45987 21.9284C5.60831 21.9717 4.75714 21.8356 3.96152 21.529C3.16591 21.2223 2.4436 20.7519 1.84141 20.1483C1.23922 19.5446 0.770575 18.8211 0.465856 18.0248C0.161136 17.2284 0.0271366 16.3769 0.072541 15.5255L0.0716243 15.5401C0.0227355 14.6999 -0.00170898 13.1864 -0.00170898 10.9999C-0.00170898 8.81332 0.0227355 7.29991 0.0716243 6.45963C0.0282948 5.60806 0.164369 4.75689 0.471028 3.96128C0.777687 3.16566 1.24809 2.44336 1.85175 1.84116C2.45541 1.23897 3.17886 0.770331 3.97522 0.465611C4.77158 0.160892 5.62308 0.0268924 6.47454 0.0722969L6.45987 0.0713802C7.30015 0.0224913 8.81357 -0.00195312 11.0001 -0.00195312C13.1867 -0.00195312 14.7001 0.0224913 15.5404 0.0713802C16.3919 0.0280507 17.2431 0.164125 18.0387 0.470784C18.8343 0.777443 19.5566 1.24784 20.1588 1.85151C20.761 2.45517 21.2297 3.17862 21.5344 3.97498C21.8391 4.77134 21.9731 5.62284 21.9277 6.4743L21.9286 6.45963C21.9775 7.2993 22.002 8.81271 22.002 10.9999Z" fill="white" />
+								</svg>
+							</a>
+						</li>
+						<li class="social-list__item">
+							<a class="social-list__link" href="#">
+								<svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M21.8293 0.15824L1.08419 8.17627C-0.315786 8.68535 -0.315786 9.57625 0.829647 9.83079L6.04773 11.4853L8.08406 17.5943C8.3386 18.2306 8.21133 18.4852 8.84768 18.4852C9.35676 18.4852 9.6113 18.2306 9.86584 17.9761C9.99311 17.8488 11.1385 16.7034 12.4112 15.4307L17.7566 19.3761C18.7748 19.8851 19.4111 19.6306 19.6657 18.4852L23.2292 1.81275C23.611 0.412781 22.7201 -0.350841 21.8293 0.15824ZM19.1566 3.97635L9.22949 13.0125L8.84768 17.2125L6.81135 11.1035L18.5202 3.72181C19.0293 3.34 19.5384 3.59454 19.1566 3.97635Z" fill="white" />
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="intro__decor intro__decor--1 decor">
+				<span class="decor__accent decor__el"></span>
+				<span class="decor__bordered decor__el"></span>
+			</div>
+			<div class="intro__decor intro__decor--2 decor">
+				<span class="decor__dark decor__el"></span>
+				<span class="decor__accent decor__el"></span>
+				<span class="decor__bordered decor__el"></span>
+			</div>
+		</section>
+
+		<section class="about" id="about" data-lock-padding>
+			<div class="container">
+				<div class="about__inner">
+					<div class="about__content" data-animatable>
+						<h2 class="title about__title">
+							Новый образ жизни
+						</h2>
+						<p class="about__text">
+							Став частью нашей команды, вы сможете изменить привычный ритм жизни и сделать каждый свой день особенным, а формат наших тренировок позволит вам раскрыть потенциал вашего тела на 100%.
+						</p>
+						<a class="about__button button button--light" data-popup-target="#popup-success" href="#">
+							<span>Получить консультацию</span>
+						</a>
+					</div>
+					<div class="about__showcase">
+						<img class="about__showcase-img" src="img/about/1.jpg" alt="image">
+						<img class="about__showcase-img" src="img/about/2.jpg" alt="image">
+					</div>
+				</div>
+				<div class="about__cards" data-animatable>
+					<ul class="about__cards-list">
+						<li class="about__card">
+							<img class="about__card-img" src="img/about/cards/1.svg" alt="card">
+							<p class="about__card-text">
+								Полностью укомплектованный зал
+							</p>
+						</li>
+						<li class="about__card">
+							<img class="about__card-img" src="img/about/cards/2.svg" alt="card">
+							<p class="about__card-text">
+								Профессиональное оборудование
+							</p>
+						</li>
+						<li class="about__card">
+							<img class="about__card-img" src="img/about/cards/3.svg" alt="card">
+							<p class="about__card-text">
+								Удобное расположение в центре Киева
+							</p>
+						</li>
+						<li class="about__card">
+							<img class="about__card-img" src="img/about/cards/4.svg" alt="card">
+							<p class="about__card-text">
+								Доступная стоимость занятий
+							</p>
+						</li>
+					</ul>
+					<div class="about__cards-active"></div>
+				</div>
+			</div>
+		</section>
+
+		<section class="gallery" id="gallery" data-lock-padding>
+			<div class="container">
+				<h2 class="title gallery__title">
+					Галерея
+				</h2>
+				<div class="gallery__inner">
+					<div class="swiper employees-slider">
+						<div class="swiper-wrapper">
+							<div class="employees-slider__slide swiper-slide">
+								<img class="employees-slider__slide-img" src="img/gallery/employees/1.jpg" alt="coach">
+							</div>
+							<div class="employees-slider__slide swiper-slide">
+								<img class="employees-slider__slide-img" src="img/gallery/employees/2.jpg" alt="coach">
+							</div>
+							<div class="employees-slider__slide swiper-slide">
+								<img class="employees-slider__slide-img" src="img/gallery/employees/3.jpg" alt="coach">
+							</div>
+							<div class="employees-slider__slide swiper-slide">
+								<img class="employees-slider__slide-img" src="img/gallery/employees/4.jpg" alt="coach">
+							</div>
+							<div class="employees-slider__slide swiper-slide">
+								<img class="employees-slider__slide-img" src="img/gallery/employees/5.jpg" alt="coach">
+							</div>
+							<div class="employees-slider__slide swiper-slide">
+								<img class="employees-slider__slide-img" src="img/gallery/employees/6.jpg" alt="coach">
+							</div>
+							<div class="employees-slider__slide swiper-slide">
+								<img class="employees-slider__slide-img" src="img/gallery/employees/7.jpg" alt="coach">
+							</div>
+							<div class="employees-slider__slide swiper-slide">
+								<img class="employees-slider__slide-img" src="img/gallery/employees/8.jpg" alt="coach">
+							</div>
+						</div>
+						<div class="swiper-scrollbar"></div>
+					</div>
+					<button class="gallery__button gallery__button--prev employees-slider-prev" type="button">
+						<svg width="36" height="24" viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M35.5 12.0384C35.5 11.7069 35.3683 11.389 35.1339 11.1546C34.8995 10.9201 34.5816 10.7884 34.25 10.7884H4.76754L12.635 2.92344C12.7513 2.80722 12.8434 2.66925 12.9063 2.5174C12.9692 2.36555 13.0016 2.2028 13.0016 2.03844C13.0016 1.87408 12.9692 1.71133 12.9063 1.55949C12.8434 1.40764 12.7513 1.26966 12.635 1.15344C12.5188 1.03722 12.3808 0.945034 12.229 0.882136C12.0771 0.819238 11.9144 0.786865 11.75 0.786865C11.5857 0.786865 11.4229 0.819238 11.2711 0.882136C11.1192 0.945034 10.9813 1.03722 10.865 1.15344L0.865037 11.1534C0.748629 11.2696 0.656272 11.4075 0.593256 11.5594C0.53024 11.7112 0.497803 11.874 0.497803 12.0384C0.497803 12.2029 0.53024 12.3657 0.593256 12.5175C0.656272 12.6694 0.748629 12.8073 0.865037 12.9234L10.865 22.9234C10.9813 23.0397 11.1192 23.1319 11.2711 23.1948C11.4229 23.2577 11.5857 23.29 11.75 23.29C11.9144 23.29 12.0771 23.2577 12.229 23.1948C12.3808 23.1319 12.5188 23.0397 12.635 22.9234C12.7513 22.8072 12.8434 22.6693 12.9063 22.5174C12.9692 22.3656 13.0016 22.2028 13.0016 22.0384C13.0016 21.8741 12.9692 21.7113 12.9063 21.5595C12.8434 21.4076 12.7513 21.2697 12.635 21.1534L4.76754 13.2884H34.25C34.5816 13.2884 34.8995 13.1567 35.1339 12.9223C35.3683 12.6879 35.5 12.37 35.5 12.0384Z" fill="#F7931E" />
+						</svg>
+					</button>
+					<button class="gallery__button gallery__button--next employees-slider-next" type="button">
+						<svg width="36" height="23" viewBox="0 0 36 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.499966 11.5C0.499966 11.8315 0.63166 12.1495 0.866081 12.3839C1.1005 12.6183 1.41845 12.75 1.74997 12.75L31.2325 12.75L23.365 20.615C23.2487 20.7312 23.1566 20.8692 23.0937 21.021C23.0308 21.1729 22.9984 21.3356 22.9984 21.5C22.9984 21.6644 23.0308 21.8271 23.0937 21.979C23.1566 22.1308 23.2487 22.2688 23.365 22.385C23.4812 22.5012 23.6192 22.5934 23.771 22.6563C23.9229 22.7192 24.0856 22.7516 24.25 22.7516C24.4143 22.7516 24.5771 22.7192 24.7289 22.6563C24.8808 22.5934 25.0187 22.5012 25.135 22.385L35.135 12.385C35.2514 12.2689 35.3437 12.131 35.4067 11.9791C35.4698 11.8272 35.5022 11.6644 35.5022 11.5C35.5022 11.3356 35.4698 11.1728 35.4067 11.0209C35.3437 10.8691 35.2514 10.7311 35.135 10.615L25.135 0.615004C25.0187 0.498785 24.8808 0.406593 24.7289 0.343697C24.5771 0.280798 24.4143 0.248426 24.25 0.248426C24.0856 0.248426 23.9229 0.280798 23.771 0.343697C23.6192 0.406593 23.4812 0.498785 23.365 0.615004C23.2487 0.731224 23.1566 0.869196 23.0937 1.02105C23.0308 1.17289 22.9984 1.33565 22.9984 1.5C22.9984 1.66436 23.0308 1.82712 23.0937 1.97896C23.1566 2.13081 23.2487 2.26879 23.365 2.385L31.2325 10.25L1.74997 10.25C1.41845 10.25 1.1005 10.3817 0.866081 10.6161C0.63166 10.8505 0.499966 11.1685 0.499966 11.5Z" fill="#F7931E" />
+						</svg>
+					</button>
+				</div>
+
+				<div class="gallery__inner">
+					<div class="swiper gyms-slider">
+						<div class="swiper-wrapper">
+							<div class="gyms-slider__slide swiper-slide">
+								<img class="gyms-slider__slide-img" src="img/gallery/gyms/1.jpg" alt="gym">
+							</div>
+							<div class="gyms-slider__slide swiper-slide">
+								<img class="gyms-slider__slide-img" src="img/gallery/gyms/2.jpg" alt="gym">
+							</div>
+							<div class="gyms-slider__slide swiper-slide">
+								<img class="gyms-slider__slide-img" src="img/gallery/gyms/3.jpg" alt="gym">
+							</div>
+							<div class="gyms-slider__slide swiper-slide">
+								<img class="gyms-slider__slide-img" src="img/gallery/gyms/4.jpg" alt="gym">
+							</div>
+							<div class="gyms-slider__slide swiper-slide">
+								<img class="gyms-slider__slide-img" src="img/gallery/gyms/5.jpg" alt="gym">
+							</div>
+							<div class="gyms-slider__slide swiper-slide">
+								<img class="gyms-slider__slide-img" src="img/gallery/gyms/6.jpg" alt="gym">
+							</div>
+							<div class="gyms-slider__slide swiper-slide">
+								<img class="gyms-slider__slide-img" src="img/gallery/gyms/7.jpg" alt="gym">
+							</div>
+							<div class="gyms-slider__slide swiper-slide">
+								<img class="gyms-slider__slide-img" src="img/gallery/gyms/8.jpg" alt="gym">
+							</div>
+						</div>
+						<div class="swiper-scrollbar"></div>
+					</div>
+					<button class="gallery__button gallery__button--prev gyms-slider-prev" type="button">
+						<svg width="36" height="24" viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M35.5 12.0384C35.5 11.7069 35.3683 11.389 35.1339 11.1546C34.8995 10.9201 34.5816 10.7884 34.25 10.7884H4.76754L12.635 2.92344C12.7513 2.80722 12.8434 2.66925 12.9063 2.5174C12.9692 2.36555 13.0016 2.2028 13.0016 2.03844C13.0016 1.87408 12.9692 1.71133 12.9063 1.55949C12.8434 1.40764 12.7513 1.26966 12.635 1.15344C12.5188 1.03722 12.3808 0.945034 12.229 0.882136C12.0771 0.819238 11.9144 0.786865 11.75 0.786865C11.5857 0.786865 11.4229 0.819238 11.2711 0.882136C11.1192 0.945034 10.9813 1.03722 10.865 1.15344L0.865037 11.1534C0.748629 11.2696 0.656272 11.4075 0.593256 11.5594C0.53024 11.7112 0.497803 11.874 0.497803 12.0384C0.497803 12.2029 0.53024 12.3657 0.593256 12.5175C0.656272 12.6694 0.748629 12.8073 0.865037 12.9234L10.865 22.9234C10.9813 23.0397 11.1192 23.1319 11.2711 23.1948C11.4229 23.2577 11.5857 23.29 11.75 23.29C11.9144 23.29 12.0771 23.2577 12.229 23.1948C12.3808 23.1319 12.5188 23.0397 12.635 22.9234C12.7513 22.8072 12.8434 22.6693 12.9063 22.5174C12.9692 22.3656 13.0016 22.2028 13.0016 22.0384C13.0016 21.8741 12.9692 21.7113 12.9063 21.5595C12.8434 21.4076 12.7513 21.2697 12.635 21.1534L4.76754 13.2884H34.25C34.5816 13.2884 34.8995 13.1567 35.1339 12.9223C35.3683 12.6879 35.5 12.37 35.5 12.0384Z" fill="#F7931E" />
+						</svg>
+					</button>
+					<button class="gallery__button gallery__button--next gyms-slider-next" type="button">
+						<svg width="36" height="23" viewBox="0 0 36 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.499966 11.5C0.499966 11.8315 0.63166 12.1495 0.866081 12.3839C1.1005 12.6183 1.41845 12.75 1.74997 12.75L31.2325 12.75L23.365 20.615C23.2487 20.7312 23.1566 20.8692 23.0937 21.021C23.0308 21.1729 22.9984 21.3356 22.9984 21.5C22.9984 21.6644 23.0308 21.8271 23.0937 21.979C23.1566 22.1308 23.2487 22.2688 23.365 22.385C23.4812 22.5012 23.6192 22.5934 23.771 22.6563C23.9229 22.7192 24.0856 22.7516 24.25 22.7516C24.4143 22.7516 24.5771 22.7192 24.7289 22.6563C24.8808 22.5934 25.0187 22.5012 25.135 22.385L35.135 12.385C35.2514 12.2689 35.3437 12.131 35.4067 11.9791C35.4698 11.8272 35.5022 11.6644 35.5022 11.5C35.5022 11.3356 35.4698 11.1728 35.4067 11.0209C35.3437 10.8691 35.2514 10.7311 35.135 10.615L25.135 0.615004C25.0187 0.498785 24.8808 0.406593 24.7289 0.343697C24.5771 0.280798 24.4143 0.248426 24.25 0.248426C24.0856 0.248426 23.9229 0.280798 23.771 0.343697C23.6192 0.406593 23.4812 0.498785 23.365 0.615004C23.2487 0.731224 23.1566 0.869196 23.0937 1.02105C23.0308 1.17289 22.9984 1.33565 22.9984 1.5C22.9984 1.66436 23.0308 1.82712 23.0937 1.97896C23.1566 2.13081 23.2487 2.26879 23.365 2.385L31.2325 10.25L1.74997 10.25C1.41845 10.25 1.1005 10.3817 0.866081 10.6161C0.63166 10.8505 0.499966 11.1685 0.499966 11.5Z" fill="#F7931E" />
+						</svg>
+					</button>
+				</div>
+			</div>
+			<div class="gallery__decor decor" data-animatable>
+				<div class="decor__el decor__accent"></div>
+				<div class="decor__el decor__bordered"></div>
+			</div>
+		</section>
+
+		<section class="memberships" id="memberships" data-lock-padding>
+			<h2 class="memberships__title title">
+				Абонементы
+			</h2>
+			<table class="memberships__table memberships__table--1">
+				<thead>
+					<tr>
+						<th>Кол-во занятий</th>
+						<th>1 тренировка</th>
+						<th>4 тренировки</th>
+						<th>8 тренировок</th>
+						<th>12 тренировок</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>Персональный тренинг с инструктором</th>
+						<td>700 грн.</td>
+						<td>2600 грн. (действителен в течении 3 недель)</td>
+						<td>5200 грн. (действителен в течении 6 недель)</td>
+						<td>7200 грн. (действителен в течении 10 недель)</td>
+					</tr>
+					<tr>
+						<th>Самостоятельные тренировки в тренажерном зале</th>
+						<td>250 грн.</td>
+						<td>—</td>
+						<td>1500 грн. (действителен в течении 30 дней)</td>
+						<td>2000 грн. (действителен в течении 30 дней)</td>
+					</tr>
+					<tr>
+						<th>Зал групповых программ</th>
+						<td>300 грн.</td>
+						<td>—</td>
+						<td>2000 грн. (действителен в течении 30 дней</td>
+						<td>2750 грн. (действителен в течении 45 дней)</td>
+					</tr>
+				</tbody>
+			</table>
+			<h4 class="memberships__subtitle" id="memberships-timed">
+				Абонемент по времени
+			</h4>
+			<table class="memberships__table memberships__table--2">
+				<thead>
+					<tr>
+						<th>Тип карты</th>
+						<th>12 месяцев</th>
+						<th>6 месяцев</th>
+						<th>3 месяца</th>
+						<th>1 месяц</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>Индивидуальная, полная без ограничения в посещении / <span>8:00 – 23:00</span></th>
+						<td>18000(+200 мин. солярия)</td>
+						<td>12000</td>
+						<td>7000</td>
+						<td>2500</td>
+					</tr>
+					<tr>
+						<th>Индивидуальная, дневная / <span>8:00 – 17:00</span></th>
+						<td>—</td>
+						<td>9500</td>
+						<td>5500</td>
+						<td>2000</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="container">
+				<h4 class="memberships__subtitle" id="memberships-once">
+					Разовые тренировки
+				</h4>
+				<ul class="memberships__cards">
+					<li class="memberships__item" data-animatable>
+						<a class="memberships__card" href="##">
+							<h6 class="memberships__card-title">
+								Самостоятельные тренировки в тренажерном зале
+							</h6>
+							<p class="memberships__card-time">
+								<img class="memberships__card-img" src="img/icons/gym-time.svg" alt="icon">
+								<span>8:00 – 23:00</span>
+							</p>
+							<p class="memberships__card-price">
+								250&#8372;
+							</p>
+							<p class="memberships__card-amount">
+								1 тренировка
+							</p>
+							<button class="button button--accent memberships__card-button" type="button">
+								<span>Узнать</span>
+							</button>
+						</a>
+					</li>
+					<li class="memberships__item" data-animatable>
+						<a class="memberships__card" href="##">
+							<h6 class="memberships__card-title">
+								Персональный тренинг с инструктором
+							</h6>
+							<p class="memberships__card-time">
+								<img class="memberships__card-img" src="img/icons/gym-time.svg" alt="icon">
+								<span>8:00 – 23:00</span>
+							</p>
+							<p class="memberships__card-price">
+								700&#8372;
+							</p>
+							<p class="memberships__card-amount">
+								1 тренировка
+							</p>
+							<button class="button button--accent memberships__card-button" type="button">
+								<span>Узнать</span>
+							</button>
+						</a>
+					</li>
+					<li class="memberships__item" data-animatable>
+						<a class="memberships__card" href="##">
+							<h6 class="memberships__card-title">
+								Зал групповых программ
+							</h6>
+							<p class="memberships__card-time">
+								<img class="memberships__card-img" src="img/icons/gym-time.svg" alt="icon">
+								<span>график занятий уточняйте у администратора</span>
+							</p>
+							<p class="memberships__card-price">
+								300&#8372;
+							</p>
+							<p class="memberships__card-amount">
+								1 тренировка
+							</p>
+							<button class="button button--accent memberships__card-button" type="button">
+								<span>Узнать</span>
+							</button>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="memberships__decor decor">
+				<div class="decor__el decor__el--right decor__accent"></div>
+				<div class="decor__el decor__el--right decor__dark"></div>
+				<div class="decor__el decor__el--right decor__bordered"></div>
+
+				<div class="decor__el decor__el--left decor__dark"></div>
+				<div class="decor__el decor__el--left decor__bordered"></div>
+			</div>
+		</section>
+
+		<section class="coaches" id="coaches" data-animatable data-lock-padding>
+			<div class="container">
+				<div class="coaches__inner">
+					<h2 class="coaches__title title">
+						Тренеры
+					</h2>
+					<div class="swiper coaches__slider">
+						<div class="swiper-wrapper">
+							<div class="coaches__slide swiper-slide">
+								<img class="coaches__slide-img" src="img/coaches/1.jpg" alt="coach">
+								<h6 class="coaches__slide-name">Илья Панченко</h6>
+								<p class="coaches__slide-info">Персональный тренер</p>
+								<p class="coaches__slide-info">Инструктор тренажерного зала</p>
+								<p class="coaches__slide-info">Опыт работы — 4 года</p>
+							</div>
+							<div class="coaches__slide swiper-slide">
+								<img class="coaches__slide-img" src="img/coaches/2.jpg" alt="coach">
+								<h6 class="coaches__slide-name">Екатерина Сосина-Нуньес</h6>
+								<p class="coaches__slide-info">Фитнес-тренер</p>
+								<p class="coaches__slide-info">Опыт работы — 4 года</p>
+							</div>
+							<div class="coaches__slide swiper-slide">
+								<img class="coaches__slide-img" src="img/coaches/3.jpg" alt="coach">
+								<h6 class="coaches__slide-name">Юлия Белова</h6>
+								<p class="coaches__slide-info">Фитнес-тренер</p>
+								<p class="coaches__slide-info">Опыт работы — 3 года</p>
+							</div>
+							<div class="coaches__slide swiper-slide">
+								<img class="coaches__slide-img" src="img/coaches/4.jpg" alt="coach">
+								<h6 class="coaches__slide-name">Михаил Антоненко</h6>
+								<p class="coaches__slide-info">Фитнес-тренер</p>
+								<p class="coaches__slide-info">Опыт работы — 7 лет</p>
+							</div>
+							<div class="coaches__slide swiper-slide">
+								<img class="coaches__slide-img" src="img/coaches/5.jpg" alt="coach">
+								<h6 class="coaches__slide-name">Сяндзы Украинец</h6>
+								<p class="coaches__slide-info">Тренер по легкой атлетике</p>
+								<p class="coaches__slide-info">Опыт работы — 2 года</p>
+							</div>
+							<div class="coaches__slide swiper-slide">
+								<img class="coaches__slide-img" src="img/coaches/6.jpg" alt="coach">
+								<h6 class="coaches__slide-name">Андрей Антонов</h6>
+								<p class="coaches__slide-info">Тренер по MMA</p>
+								<p class="coaches__slide-info">Украинский призёр</p>
+							</div>
+							<div class="coaches__slide swiper-slide">
+								<img class="coaches__slide-img" src="img/coaches/7.jpg" alt="coach">
+								<h6 class="coaches__slide-name">Джек Джейн</h6>
+								<p class="coaches__slide-info">Трене по вольной борьбе</p>
+								<p class="coaches__slide-info">Стаж - 7 лет, призёр Украины</p>
+							</div>
+							<div class="coaches__slide swiper-slide">
+								<img class="coaches__slide-img" src="img/coaches/8.jpg" alt="coach">
+								<h6 class="coaches__slide-name">Тадж Сандху</h6>
+								<p class="coaches__slide-info">Тренер по пауерлифтингу</p>
+								<p class="coaches__slide-info">Опыт работы — 5 лет</p>
+							</div>
+						</div>
+						<div class="swiper-scrollbar"></div>
+					</div>
+				</div>
+				<div class="swiper-buttons">
+					<button class="swiper-button swiper-button-prev" type="button">
+						<svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M23.375 8.00005C23.375 7.78456 23.2894 7.5779 23.137 7.42553C22.9846 7.27315 22.778 7.18755 22.5625 7.18755H3.39886L8.51274 2.0753C8.58828 1.99976 8.6482 1.91007 8.68909 1.81137C8.72997 1.71267 8.75101 1.60688 8.75101 1.50005C8.75101 1.39322 8.72997 1.28743 8.68909 1.18873C8.6482 1.09003 8.58828 1.00034 8.51274 0.9248C8.43719 0.849257 8.34751 0.789333 8.24881 0.74845C8.15011 0.707566 8.04432 0.686523 7.93749 0.686523C7.83065 0.686523 7.72487 0.707566 7.62616 0.74845C7.52746 0.789333 7.43778 0.849257 7.36224 0.9248L0.862238 7.4248C0.786572 7.50027 0.72654 7.58994 0.68558 7.68865C0.644619 7.78736 0.623535 7.89318 0.623535 8.00005C0.623535 8.10692 0.644619 8.21274 0.68558 8.31145C0.72654 8.41017 0.786572 8.49983 0.862238 8.5753L7.36224 15.0753C7.43778 15.1508 7.52746 15.2108 7.62616 15.2517C7.72487 15.2925 7.83065 15.3136 7.93749 15.3136C8.04432 15.3136 8.15011 15.2925 8.24881 15.2517C8.34751 15.2108 8.43719 15.1508 8.51274 15.0753C8.58828 14.9998 8.6482 14.9101 8.68909 14.8114C8.72997 14.7127 8.75101 14.6069 8.75101 14.5001C8.75101 14.3932 8.72997 14.2874 8.68909 14.1887C8.6482 14.09 8.58828 14.0003 8.51274 13.9248L3.39886 8.81255H22.5625C22.778 8.81255 22.9846 8.72695 23.137 8.57458C23.2894 8.4222 23.375 8.21554 23.375 8.00005Z" fill="white" />
+						</svg>
+					</button>
+					<button class="swiper-button swiper-button-next" type="button">
+						<svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.625013 7.99995C0.625013 8.21544 0.710615 8.4221 0.862988 8.57447C1.01536 8.72685 1.22202 8.81245 1.43751 8.81245L20.6011 8.81245L15.4873 13.9247C15.4117 14.0002 15.3518 14.0899 15.3109 14.1886C15.27 14.2873 15.249 14.3931 15.249 14.5C15.249 14.6068 15.27 14.7126 15.3109 14.8113C15.3518 14.91 15.4117 14.9997 15.4873 15.0752C15.5628 15.1507 15.6525 15.2107 15.7512 15.2516C15.8499 15.2924 15.9557 15.3135 16.0625 15.3135C16.1693 15.3135 16.2751 15.2924 16.3738 15.2516C16.4725 15.2107 16.5622 15.1507 16.6378 15.0752L23.1378 8.5752C23.2134 8.49973 23.2735 8.41006 23.3144 8.31135C23.3554 8.21264 23.3765 8.10682 23.3765 7.99995C23.3765 7.89308 23.3554 7.78726 23.3144 7.68855C23.2735 7.58983 23.2134 7.50017 23.1378 7.4247L16.6378 0.924698C16.5622 0.849155 16.4725 0.789231 16.3738 0.748348C16.2751 0.707464 16.1693 0.686423 16.0625 0.686423C15.9557 0.686423 15.8499 0.707464 15.7512 0.748348C15.6525 0.789231 15.5628 0.849155 15.4873 0.924698C15.4117 1.00024 15.3518 1.08992 15.3109 1.18863C15.27 1.28733 15.249 1.39311 15.249 1.49995C15.249 1.60678 15.27 1.71257 15.3109 1.81127C15.3518 1.90997 15.4117 1.99966 15.4873 2.0752L20.6011 7.18745L1.43751 7.18745C1.22202 7.18745 1.01536 7.27305 0.862988 7.42542C0.710615 7.5778 0.625013 7.78446 0.625013 7.99995Z" fill="white" />
+						</svg>
+					</button>
+				</div>
+			</div>
+			<div class="coaches__decor">
+				<div class="decor__el decor__accent"></div>
+				<div class="decor__el decor__bordered"></div>
+			</div>
+		</section>
+
+		<section class="questions" data-animatable data-lock-padding>
+			<div class="container">
+				<div class="questions__box">
+					<h4 class="questions__title">
+						Остались вопросы?
+					</h4>
+					<p class="questions__text">
+						Оставьте Ваш номер телефона и мы <span>обязательно с Вами свяжемся</span>
+					</p>
+					<form class="questions__form" data-animatable id="questions-form" autocomplete="off">
+						<div class="questions__form-items">
+							<div class="questions__form-item">
+								<input class="questions__form-input" id="name" type="text" placeholder="Введите имя">
+								<img class="questions__form-error" src="img/icons/error.svg" alt="error">
+								<img class="questions__form-success" src="img/icons/success.svg" alt="success">
+								<span class="error-text"></span>
+							</div>
+							<div class="questions__form-item">
+								<input class="questions__form-input" id="phone" type="text" placeholder="Введите телефон">
+								<img class="questions__form-error" src="img/icons/error.svg" alt="error">
+								<img class="questions__form-success" src="img/icons/success.svg" alt="success">
+								<span class="error-text"></span>
+							</div>
+						</div>
+						<button class="button button--light questions__form-button" type="submit">
+							<span>Получить консультацию</span>
+						</button>
+					</form>
+					<a class="questions__agreement" href="#">
+						Нажимая на кнопку вы соглашаетесь с политикой конфиденциальности
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<div class="popup" id="popup-success">
+			<div class="popup__body">
+				<div class="popup__body-inner">
+					<button class="popup__close" data-popup-close type="button">
+						<img src="img/icons/cross.svg" alt="close popup">
+					</button>
+					<a class="popup__logo logo" href="#">
+						<picture>
+							<source srcset="img/logo-lg.png" media="(min-width: 768px)">
+							<img src="img/logo-sm.png" alt="logo">
+						</picture>
+					</a>
+					<div class="popup__content">
+						<h6 class="popup__title">
+							Данные успешно отправлены
+						</h6>
+						<p class="popup__text">
+							Мы свяжемся с вами вближайшее время
+						</p>
+						<address class="popup__address">
+							<ul class="popup__list">
+								<li class="popup__list-item">
+									<img src="img/icons/location.svg" alt="location">
+									<span>г. Киев, ул. Ереванская 17</span>
+								</li>
+								<li class="popup__list-item">
+									<img src="img/icons/clock.svg" alt="clock">
+									<span>Ежедневно с <time datetime="8:00">8:00</time> до <time datetime="23:00">23:00</time></span>
+								</li>
+								<li class="popup__list-item popup__list-item--social">
+									<span>Подписывайтесь на наши соц.сети</span>
+									<ul class="social-list popup__social-list">
+										<li class="social-list__item">
+											<a class="social-list__link" href="#">
+												<svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M14.6686 10.9999V10.999C14.6686 10.1507 14.3744 9.32867 13.8363 8.67295C13.2982 8.01723 12.5493 7.56839 11.7173 7.40289C10.8854 7.23739 10.0217 7.36548 9.27361 7.76533C8.52549 8.16517 7.93914 8.81205 7.61448 9.59573C7.28981 10.3794 7.24691 11.2514 7.49309 12.0632C7.73927 12.875 8.25928 13.5763 8.96455 14.0476C9.66981 14.519 10.5167 14.7312 11.3609 14.6482C12.2051 14.5651 12.9944 14.1919 13.5943 13.5922C13.9347 13.2632 14.2052 12.8689 14.3898 12.4329C14.5744 11.997 14.6692 11.5283 14.6686 11.0549L14.6677 10.9971V10.9999H14.6686ZM16.6486 10.9999C16.6442 12.3001 16.1894 13.5587 15.3616 14.5614C14.5337 15.564 13.384 16.2489 12.1081 16.4993C10.8322 16.7497 9.5089 16.5503 8.36346 15.935C7.21803 15.3196 6.32121 14.3264 5.82564 13.1242C5.33006 11.9221 5.26636 10.5854 5.64536 9.34163C6.02436 8.09783 6.82265 7.02379 7.90437 6.3023C8.98609 5.5808 10.2844 5.25643 11.5783 5.38439C12.8723 5.51235 14.0819 6.08474 15.0014 7.00413C15.5235 7.51079 15.9385 8.11723 16.2216 8.78743C16.5048 9.45763 16.6503 10.1779 16.6495 10.9055L16.6486 11.0054V11.0008V10.9999ZM18.195 5.12771V5.12955C18.1951 5.43494 18.0893 5.73092 17.8957 5.96705C17.702 6.20319 17.4325 6.36486 17.1329 6.42453C16.8334 6.4842 16.5225 6.43817 16.2531 6.29429C15.9838 6.15041 15.7726 5.91757 15.6557 5.63545C15.5387 5.35334 15.5232 5.0394 15.6118 4.74713C15.7004 4.45487 15.8875 4.20235 16.1414 4.03262C16.3953 3.86289 16.7002 3.78644 17.0041 3.8163C17.308 3.84616 17.5922 3.98048 17.8082 4.19638C18.0429 4.42646 18.1886 4.7473 18.1886 5.10205V5.12863V5.12771H18.195ZM11.0084 1.97438L9.91296 1.96705C9.24929 1.96216 8.74543 1.96216 8.40137 1.96705C8.05732 1.97194 7.59654 1.9863 7.01904 2.01013C6.48279 2.02846 5.97404 2.08163 5.47629 2.16596L5.54321 2.1568C5.15362 2.22096 4.80804 2.31263 4.47712 2.43455L4.51654 2.42171C4.04905 2.60964 3.62392 2.88928 3.26622 3.24414C2.90853 3.599 2.62552 4.02189 2.43387 4.48788L2.42471 4.51263C2.30705 4.83467 2.21989 5.16704 2.16437 5.50538L2.15979 5.5393C2.07826 6.02096 2.02956 6.50761 2.01404 6.99588L2.01312 7.01513C1.98929 7.59324 1.97493 8.05402 1.97004 8.39746C1.96515 8.74091 1.96515 9.24477 1.97004 9.90905C1.97493 10.5733 1.97737 10.9385 1.97737 11.0045C1.97737 11.0705 1.97493 11.4356 1.97004 12.0999C1.96515 12.7642 1.96515 13.268 1.97004 13.6115C1.97493 13.9549 1.98929 14.4157 2.01312 14.9938C2.03146 15.53 2.08462 16.0388 2.16896 16.5365L2.15979 16.4696C2.22396 16.8592 2.31562 17.2048 2.43754 17.5357L2.42471 17.4963C2.61264 17.9638 2.89228 18.3889 3.24714 18.7466C3.602 19.1043 4.02489 19.3873 4.49087 19.579L4.51562 19.5881C4.80712 19.6972 5.15271 19.7889 5.50837 19.8485L5.54229 19.853C5.97221 19.9282 6.48096 19.9814 6.99796 19.9988L7.01721 19.9997C7.59532 20.0235 8.0561 20.0379 8.39954 20.0428C8.74299 20.0477 9.24685 20.0477 9.91112 20.0428L11.0001 20.0208L12.0955 20.0281C12.7592 20.033 13.2631 20.033 13.6071 20.0281C13.9512 20.0232 14.412 20.0089 14.9895 19.985C15.5257 19.9667 16.0345 19.9135 16.5322 19.8292L16.4653 19.8384C16.8549 19.7742 17.2005 19.6825 17.5314 19.5606L17.492 19.5735C17.9595 19.3855 18.3846 19.1059 18.7423 18.751C19.1 18.3962 19.383 17.9733 19.5746 17.5073L19.5838 17.4825C19.6929 17.191 19.7845 16.8455 19.8441 16.4898L19.8487 16.4559C19.9239 16.026 19.977 15.5172 19.9945 15.0002L19.9954 14.981C20.0192 14.4029 20.0336 13.9421 20.0385 13.5986C20.0433 13.2552 20.0433 12.7513 20.0385 12.087C20.0336 11.4228 20.0311 11.0576 20.0311 10.9916C20.0311 10.9256 20.0336 10.5605 20.0385 9.89621C20.0433 9.23193 20.0433 8.72807 20.0385 8.38463C20.0336 8.04119 20.0192 7.58041 19.9954 7.0023C19.977 6.46605 19.9239 5.9573 19.8395 5.45955L19.8487 5.52646C19.7906 5.16301 19.6975 4.806 19.571 4.46038L19.5838 4.4998C19.3959 4.0323 19.1162 3.60717 18.7614 3.24948C18.4065 2.89179 17.9836 2.60877 17.5176 2.41713L17.4929 2.40796C17.1708 2.2903 16.8385 2.20314 16.5001 2.14763L16.4662 2.14305C15.9848 2.06156 15.4985 2.01286 15.0105 1.9973L14.9913 1.99638C14.4132 1.97255 13.9524 1.95819 13.609 1.9533C13.2655 1.94841 12.7617 1.94841 12.0974 1.9533L11.0084 1.97438ZM22.002 10.9999C22.002 13.1864 21.9775 14.6999 21.9286 15.5401C21.972 16.3917 21.8359 17.2429 21.5292 18.0385C21.2226 18.8341 20.7522 19.5564 20.1485 20.1586C19.5448 20.7608 18.8214 21.2294 18.025 21.5341C17.2287 21.8389 16.3772 21.9729 15.5257 21.9275L15.5404 21.9284C14.7001 21.9773 13.1867 22.0017 11.0001 22.0017C8.81357 22.0017 7.30015 21.9773 6.45987 21.9284C5.60831 21.9717 4.75714 21.8356 3.96152 21.529C3.16591 21.2223 2.4436 20.7519 1.84141 20.1483C1.23922 19.5446 0.770575 18.8211 0.465856 18.0248C0.161136 17.2284 0.0271366 16.3769 0.072541 15.5255L0.0716243 15.5401C0.0227355 14.6999 -0.00170898 13.1864 -0.00170898 10.9999C-0.00170898 8.81332 0.0227355 7.29991 0.0716243 6.45963C0.0282948 5.60806 0.164369 4.75689 0.471028 3.96128C0.777687 3.16566 1.24809 2.44336 1.85175 1.84116C2.45541 1.23897 3.17886 0.770331 3.97522 0.465611C4.77158 0.160892 5.62308 0.0268924 6.47454 0.0722969L6.45987 0.0713802C7.30015 0.0224913 8.81357 -0.00195312 11.0001 -0.00195312C13.1867 -0.00195312 14.7001 0.0224913 15.5404 0.0713802C16.3919 0.0280507 17.2431 0.164125 18.0387 0.470784C18.8343 0.777443 19.5566 1.24784 20.1588 1.85151C20.761 2.45517 21.2297 3.17862 21.5344 3.97498C21.8391 4.77134 21.9731 5.62284 21.9277 6.4743L21.9286 6.45963C21.9775 7.2993 22.002 8.81271 22.002 10.9999Z" fill="#F7931E" />
+												</svg>
+											</a>
+										</li>
+										<li class="social-list__item">
+											<a class="social-list__link" href="#">
+												<svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M21.8293 0.15824L1.08419 8.17627C-0.315786 8.68535 -0.315786 9.57625 0.829647 9.83079L6.04773 11.4853L8.08406 17.5943C8.3386 18.2306 8.21133 18.4852 8.84768 18.4852C9.35676 18.4852 9.6113 18.2306 9.86584 17.9761C9.99311 17.8488 11.1385 16.7034 12.4112 15.4307L17.7566 19.3761C18.7748 19.8851 19.4111 19.6306 19.6657 18.4852L23.2292 1.81275C23.611 0.412781 22.7201 -0.350841 21.8293 0.15824ZM19.1566 3.97635L9.22949 13.0125L8.84768 17.2125L6.81135 11.1035L18.5202 3.72181C19.0293 3.34 19.5384 3.59454 19.1566 3.97635Z" fill="#F7931E" />
+												</svg>
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</address>
+					</div>
+					<div class="decor popup__decor">
+						<div class="decor__el decor__accent"></div>
+						<div class="decor__el decor__bordered"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	@@include('html/footer.html')
+
+	<script src="js/app.min.js"></script>
+</body>
+
+</html>

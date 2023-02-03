@@ -1,0 +1,13 @@
+@use 'global/reset';
+@use 'global/libs';
+@use 'global/global';
+
+@use 'blocks/header';
+@use 'blocks/intro';
+@use 'blocks/about';
+@use 'blocks/gallery';
+@use 'blocks/memberships';
+@use 'blocks/coaches';
+@use 'blocks/questions';
+@use 'blocks/footer';
+@use 'blocks/popup';

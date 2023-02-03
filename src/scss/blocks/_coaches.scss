@@ -1,0 +1,157 @@
+@use '../global/abstracts' as *;
+
+.coaches {
+	padding-block: clamp(5rem, 4.614rem + 1.93vw, 6.25rem);
+	position: relative;
+
+	.container {
+		padding-right: 0;
+
+		@media (min-width: em(1355)) {
+			padding-right: rem(15);
+		}
+	}
+
+	&__inner {
+		@media (min-width: em(1000)) {
+			display: flex;
+			align-items: center;
+			column-gap: rem(50);
+			margin-bottom: rem(30);
+		}
+	}
+
+	&__title {
+		text-align: center;
+		margin-bottom: rem(60);
+
+		@media (min-width: em(1000)) {
+			margin-bottom: 0;
+		}
+	}
+
+	&__slider {
+		.swiper-wrapper {
+			margin-bottom: rem(30);
+
+			@media (min-width: em(1000)) {
+				margin-bottom: 0;
+			}
+		}
+
+		.swiper-scrollbar {
+			@media (min-width: em(1000)) {
+				display: none;
+			}
+		}
+	}
+
+	.swiper-buttons {
+		display: none;
+
+		@media (min-width: em(1000)) {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			column-gap: rem(40);
+		}
+	}
+
+	.swiper-button {
+		@media (min-width: em(1000)) {
+			width: rem(26);
+			height: rem(24);
+			display: grid;
+			place-content: center;
+			transition: opacity 250ms;
+
+			&.swiper-button-disabled {
+				opacity: 0.5;
+			}
+
+			svg path {
+				transition: fill 250ms;
+			}
+
+			@media (any-hover: hover) {
+				&:not(.swiper-button-disabled):hover {
+					svg path {
+						fill: $accent;
+					}
+				}
+			}
+		}
+	}
+
+	&__slide {
+		width: auto;
+		max-width: clamp(15.625rem, 13.08rem + 12.72vw, 19.188rem);
+	}
+
+	&__slide-img {
+		aspect-ratio: 5 / 7;
+		height: clamp(21.875rem, 18.304rem + 17.86vw, 26.875rem);
+		object-fit: cover;
+		margin-bottom: rem(20);
+	}
+
+	&__slide-name {
+		font-weight: 700;
+		margin-bottom: rem(15);
+	}
+
+	&__slide-info {
+		font-size: rem(15);
+		color: rgba($white, .5);
+
+		&:not(:last-child) {
+			margin-bottom: clamp(0.313rem, 0.216rem + 0.48vw, 0.625rem);
+		}
+	}
+
+	&__decor {
+		.decor__el {
+			opacity: 0;
+			transform: translate(-280%, -70%) skewX(35deg);
+
+			.coaches.animated & {
+				opacity: 1;
+				transform: skew(35deg);
+			}
+		}
+
+		.decor__bordered {
+			width: rem(28);
+			height: rem(162);
+
+			top: rem(61);
+			left: rem(-35);
+
+			transition: opacity .5s .3s, transform .5s .3s;
+
+			@media (min-width: em(768)) {
+				width: rem(40);
+				height: rem(232);
+
+				top: rem(-26);
+				left: rem(-45);
+			}
+		}
+
+		.decor__accent {
+			width: rem(28);
+			height: rem(171);
+
+			top: rem(62);
+			left: rem(-15);
+			transition: opacity .5s .2s, transform .5s .2s;
+
+			@media (min-width: em(768)) {
+				width: rem(40);
+				height: rem(246);
+
+				top: rem(-20);
+			}
+		}
+	}
+}

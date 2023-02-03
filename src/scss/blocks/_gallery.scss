@@ -1,0 +1,154 @@
+@use '../global/abstracts' as *;
+
+.gallery {
+	padding-bottom: clamp(5rem, 4.614rem + 1.93vw, 6.25rem);
+	position: relative;
+
+	&__inner {
+		position: relative;
+	}
+
+	&__title {
+		text-align: center;
+		margin-bottom: clamp(3.75rem, 3.364rem + 1.93vw, 5rem);
+	}
+
+	&__button {
+		display: none;
+
+		@media (min-width: em(1355)) {
+			display: flex;
+
+			position: absolute;
+			top: calc(50% - rem(20));
+			transform: translateY(-50%);
+
+			svg path {
+				transition: fill 250ms;
+			}
+
+			&.swiper-button-disabled {
+				svg path {
+					fill: $white;
+				}
+			}
+		}
+	}
+
+	&__button--prev {
+		left: 0;
+	}
+
+	&__button--next {
+		right: 0;
+	}
+
+	.container {
+		padding-right: 0;
+
+		@media (min-width: em(1000)) {
+			padding-right: rem(15);
+		}
+	}
+
+	&__decor {
+
+		&.animated {
+
+			.decor__accent,
+			.decor__bordered {
+				opacity: 1;
+				transform: skew(35deg);
+			}
+		}
+
+		.decor__accent {
+			width: rem(35);
+			height: rem(225);
+			bottom: 0;
+			left: rem(-50);
+
+			opacity: 0;
+			transform: translate(-280%, -70%) skewX(35deg);
+			transition: opacity .5s, transform .5s;
+
+			@media (min-width: em(768)) {
+				width: rem(56);
+				height: rem(300);
+				left: rem(-10);
+			}
+		}
+
+		.decor__bordered {
+			width: rem(20);
+			height: rem(140);
+			bottom: rem(20);
+			left: rem(-43);
+
+			opacity: 0;
+			transform: translate(-280%, -70%) skewX(35deg);
+			transition: opacity .5s, transform .5s .1s;
+
+			@media (min-width: em(768)) {
+				width: rem(35);
+				height: rem(230);
+				bottom: rem(35);
+				left: rem(-30);
+			}
+		}
+	}
+}
+
+.employees-slider {
+	margin-bottom: clamp(2.813rem, 2.523rem + 1.45vw, 3.75rem);
+	max-width: rem(1162);
+	margin-inline: auto;
+
+	.swiper-wrapper {
+		margin-bottom: rem(30);
+	}
+
+	&__slide {
+		width: auto;
+	}
+
+	&__slide-img {
+		max-width: clamp(12.5rem, 7.768rem + 23.66vw, 19.125rem);
+		height: clamp(17.5rem, 10.804rem + 33.48vw, 26.875rem);
+
+		object-fit: cover;
+		object-position: top;
+
+		@media (min-width: em(1000)) {
+			max-width: 100%;
+			width: 100%;
+			height: rem(375);
+		}
+	}
+}
+
+.gyms-slider {
+	max-width: rem(1162);
+	margin-inline: auto;
+
+	.swiper-wrapper {
+		margin-bottom: rem(30);
+	}
+
+	&__slide {
+		width: auto;
+	}
+
+	&__slide-img {
+		aspect-ratio: 422 / 350;
+		max-width: clamp(15.938rem, 8.482rem + 37.28vw, 26.375rem);
+		height: clamp(11.625rem, 4.304rem + 36.61vw, 21.875rem);
+		object-fit: cover;
+
+		@media (min-width: em(1000)) {
+			max-width: 100%;
+			width: 100%;
+			height: rem(300);
+		}
+	}
+}
